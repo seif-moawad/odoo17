@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tb_freelancer,access_tb_freelancer,model_tb_freelancer,,1,1,1,1
+access_tb_project,access_tb_project,model_tb_project,,1,1,1,1
+access_tb_task,access_tb_task,model_tb_task,,1,1,1,1
+access_tb_skill,access_tb_skill,model_tb_skill,,1,1,1,1

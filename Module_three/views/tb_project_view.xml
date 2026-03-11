@@ -1,0 +1,47 @@
+<odoo>
+    <record id="tb_project_form_view" model="ir.ui.view">
+        <field name="name">tb_project</field>
+        <field name="model">tb.project</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="client_name"/>
+                            <field name="stage"/>
+                            <field name="freelancer_id"/>
+                        </group>
+                        <group>
+                            <field name="task_ids"/>
+                            <field name="priority"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="total_budget"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="tb_project_tree_view" model="ir.ui.view">
+        <field name="name">tb_project</field>
+        <field name="model">tb.project</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="freelancer_id"/>
+                <field name="task_ids"/>
+                <field name="client_name"/>
+                <field name="stage"/>
+                <field name="total_budget"/>
+                <field name="priority"/>
+            </tree>
+        </field>
+    </record>
+    <record id="tb_project_action" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="res_model">tb.project</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

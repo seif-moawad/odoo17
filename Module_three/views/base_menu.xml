@@ -1,0 +1,18 @@
+<odoo>
+
+    <menuitem id="tb_root_menu"
+              name="TechBridge"
+              web_icon="Module_three,static/description/icon.png"
+    />
+
+    <menuitem id="tb_freelancers_menu"
+              name="Freelancers"
+              parent="tb_root_menu"
+              action="tb_freelancer_action"
+    />
+    <menuitem id="tb_project_menu"
+              name="Projects"
+              parent="tb_root_menu"
+              action="tb_project_action"
+    />
+</odoo>
