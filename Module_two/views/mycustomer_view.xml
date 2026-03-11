@@ -1,0 +1,56 @@
+<odoo>
+    <record id="mycustomer_form_view" model="ir.ui.view">
+        <field name="name">Invoice Details</field>
+        <field name="model">mycustomer</field>
+        <field name="arch" type="xml">
+            <form string="Task">
+
+                <header>
+                    <button name="action_btn" type="object" class="btn-primary" string="click here"/>
+                </header>
+
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Details">
+                            <field name="phone"/>
+                            <field name="date"/>
+                            <field name="price"/>
+                            <field name="diff"/>
+                        </group>
+                        <group>
+                            <field name="exact_price"/>
+                            <field name="address"/>
+                            <field name="phone_2"/>
+                            <field name="shipping_day"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="mycustomer_tree_view" model="ir.ui.view">
+            <field name="name">Customer Invoice</field>
+            <field name="model">mycustomer</field>
+            <field name="arch" type="xml">
+
+                <tree string="Tasks">
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="price"/>
+                    <field name="address"/>
+                    <field name="shipping_day"/>
+                </tree>
+            </field>
+    </record>
+   <record id="mycustomer_action" model="ir.actions.act_window">
+        <field name="name">Customer Invoices</field>
+        <field name="res_model">mycustomer</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

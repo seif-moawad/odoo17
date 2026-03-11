@@ -1,0 +1,21 @@
+<odoo>
+   <!-- ###################1st level of menus home menu################## -->
+    <menuitem
+        id="real_estate_root_menu"
+        name="Real estate"
+        web_icon="Module_one,static/description/icon.png"
+    />
+   <!-- ###################2st level of menus navbar menu################## -->
+    <menuitem
+        id="properties_menu"
+        name="Properties"
+        parent="real_estate_root_menu"
+        />
+    <!-- name => the name that will be shown for the user
+         parent => mention the menu that required to add on it-->
+    <menuitem
+        id="owner_menu"
+        name="Owner"
+        parent="real_estate_root_menu"
+        />
+</odoo>

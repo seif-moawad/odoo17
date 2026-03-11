@@ -1,0 +1,12 @@
+<odoo>
+    <menuitem id="mycustomer_root_menu"
+              name="Customer Invoice"
+              sequence="55"/>
+
+    <menuitem id="properties_menu"
+              name="Properties"
+              parent="mycustomer_root_menu"
+              action="mycustomer_action"
+              sequence="10"/>
+
+</odoo>

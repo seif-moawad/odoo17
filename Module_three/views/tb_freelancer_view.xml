@@ -1,0 +1,43 @@
+<odoo>
+    <record id="tb_freelancer__form_view" model="ir.ui.view">
+        <field name="name">tb_freelancer</field>
+        <field name="model">tb.freelancer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                        </group>
+                        <group>
+                            <field name="skill_ids"/>
+                            <field name="status"/>
+                            <field name="daily_rate"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="tb_freelancer_tree_view" model="ir.ui.view">
+        <field name="name">tb_freelancer</field>
+        <field name="model">tb.freelancer</field>
+        <field name="arch" type="xml">
+            <tree string="Freelancers">
+                <field name="name"/>
+                <field name="skill_ids"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="status"/>
+                <field name="daily_rate" />
+            </tree>
+        </field>
+    </record>
+    <record id="tb_freelancer_action" model="ir.actions.act_window">
+        <field name="name">Freelancers</field>
+        <field name="res_model">tb.freelancer</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
