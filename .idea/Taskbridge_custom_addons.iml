@@ -7,4 +7,12 @@
     <orderEntry type="jdk" jdkName="Python 3.11 (.venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/../../../enterprise/enterprise-17.0/enterprise-17.0" />
+        <option value="$MODULE_DIR$/../../../odoo-codebase/odoo-17" />
+      </list>
+    </option>
+  </component>
 </module>

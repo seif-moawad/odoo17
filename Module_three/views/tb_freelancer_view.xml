@@ -3,7 +3,7 @@
         <field name="name">tb_freelancer</field>
         <field name="model">tb.freelancer</field>
         <field name="arch" type="xml">
-            <form>
+            <form class="freelancer_form_style">
                 <sheet>
                     <group>
                         <group>
@@ -25,7 +25,7 @@
         <field name="name">tb_freelancer</field>
         <field name="model">tb.freelancer</field>
         <field name="arch" type="xml">
-            <tree string="Freelancers">
+            <tree string="Freelancers" class="freelancer_list_style">
                 <field name="name"/>
                 <field name="skill_ids"/>
                 <field name="email"/>

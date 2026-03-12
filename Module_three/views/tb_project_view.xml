@@ -3,7 +3,7 @@
         <field name="name">tb_project</field>
         <field name="model">tb.project</field>
         <field name="arch" type="xml">
-            <form>
+            <form class="project_form_style">
                 <sheet>
                     <group>
                         <group>
@@ -28,7 +28,7 @@
         <field name="name">tb_project</field>
         <field name="model">tb.project</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree class="project_list_style">
                 <field name="name"/>
                 <field name="freelancer_id"/>
                 <field name="task_ids"/>

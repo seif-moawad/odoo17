@@ -1,0 +1,300 @@
+/* ═══════════════════════════════════════════
+   TECH BRIDGE — Custom Styles
+   Targets: Freelancer & Project views only
+═══════════════════════════════════════════ */
+
+
+/* ───────────────────────────────────────────
+   FREELANCER FORM
+─────────────────────────────────────────── */
+
+/* whole form background */
+.freelancer_form_style .o_form_sheet {
+    background-color: #f0f4ff;
+    border-left: 5px solid #4e73df;
+    border-radius: 10px;
+    padding: 28px;
+}
+
+/* field labels */
+.freelancer_form_style .o_group .o_form_label {
+    color: #4e73df;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    min-width: 120px;
+}
+
+/* name field input */
+.freelancer_form_style .o_field_char input {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c3e8c;
+    border-bottom: 2px solid #4e73df;
+    background: transparent;
+}
+
+/* email field */
+.freelancer_form_style .o_field_widget[name="email"] input {
+    color: #4e73df;
+    font-style: italic;
+}
+
+/* phone field */
+.freelancer_form_style .o_field_widget[name="phone"] input {
+    color: #333333;
+    letter-spacing: 1px;
+}
+
+/* daily rate field */
+.freelancer_form_style .o_field_widget[name="daily_rate"] input {
+    color: #27ae60;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* skill tags */
+.freelancer_form_style .o_field_widget[name="skill_ids"] .badge {
+    background-color: #4e73df;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 3px;
+    border: none;
+}
+
+/* status badge — available */
+.freelancer_form_style .o_field_widget[name="status"] .badge.text-bg-success {
+    background-color: #27ae60 !important;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* status badge — busy */
+.freelancer_form_style .o_field_widget[name="status"] .badge.text-bg-warning {
+    background-color: #f39c12 !important;
+    color: #ffffff !important;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* group borders */
+.freelancer_form_style .o_group {
+    border: 1px solid #d6e0ff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+}
+
+
+/* ───────────────────────────────────────────
+   FREELANCER LIST
+─────────────────────────────────────────── */
+
+/* header */
+.freelancer_list_style thead tr th {
+    background-color: #2c3e8c;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 10px;
+    border: none;
+}
+
+/* even rows */
+.freelancer_list_style tbody tr:nth-child(even) {
+    background-color: #eef1fb;
+}
+
+/* odd rows */
+.freelancer_list_style tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* hover */
+.freelancer_list_style tbody tr:hover {
+    background-color: #d6e0ff;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+/* all cells */
+.freelancer_list_style tbody tr td {
+    padding: 10px;
+    font-size: 13px;
+    color: #2c2c2c;
+    vertical-align: middle;
+}
+
+/* skill tags inside the list */
+.freelancer_list_style .o_field_many2many_tags .badge {
+    background-color: #4e73df;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 3px 10px;
+    font-size: 11px;
+    margin: 2px;
+}
+
+/* daily_rate column — green text */
+.freelancer_list_style td[name="daily_rate"] {
+    color: #27ae60;
+    font-weight: 700;
+}
+
+
+/* ───────────────────────────────────────────
+   PROJECT FORM
+─────────────────────────────────────────── */
+
+/* whole form background */
+.project_form_style .o_form_sheet {
+    background-color: #fff8f0;
+    border-left: 5px solid #e67e22;
+    border-radius: 10px;
+    padding: 28px;
+}
+
+/* field labels */
+.project_form_style .o_group .o_form_label {
+    color: #e67e22;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    min-width: 120px;
+}
+
+/* project name */
+.project_form_style .o_field_widget[name="name"] input {
+    font-size: 22px;
+    font-weight: 700;
+    color: #a04000;
+    border-bottom: 2px solid #e67e22;
+    background: transparent;
+}
+
+/* client name */
+.project_form_style .o_field_widget[name="client_name"] input {
+    color: #555555;
+    font-weight: 600;
+}
+
+/* total budget — green and bold */
+.project_form_style .o_field_widget[name="total_budget"] input {
+    color: #27ae60;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* start and end date */
+.project_form_style .o_field_widget[name="start_date"] input,
+.project_form_style .o_field_widget[name="end_date"] input {
+    color: #7f4f00;
+    font-weight: 600;
+}
+
+/* freelancer_id dropdown */
+.project_form_style .o_field_widget[name="freelancer_id"] input {
+    color: #2c3e8c;
+    font-weight: 600;
+}
+
+/* group borders */
+.project_form_style .o_group {
+    border: 1px solid #ffd9b3;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+}
+
+/* task_ids list header inside form */
+.project_form_style .o_field_widget[name="task_ids"] thead tr th {
+    background-color: #e67e22;
+    color: #ffffff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 10px;
+}
+
+/* task_ids rows inside form */
+.project_form_style .o_field_widget[name="task_ids"] tbody tr:hover {
+    background-color: #fff0e0;
+}
+
+/* stage badge */
+.project_form_style .o_field_widget[name="stage"] .o_status {
+    font-weight: 700;
+}
+
+
+/* ───────────────────────────────────────────
+   PROJECT LIST
+─────────────────────────────────────────── */
+
+/* header */
+.project_list_style thead tr th {
+    background-color: #a04000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 10px;
+    border: none;
+}
+
+/* even rows */
+.project_list_style tbody tr:nth-child(even) {
+    background-color: #fff3e6;
+}
+
+/* odd rows */
+.project_list_style tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* hover */
+.project_list_style tbody tr:hover {
+    background-color: #ffd9b3;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+/* all cells */
+.project_list_style tbody tr td {
+    padding: 10px;
+    font-size: 13px;
+    color: #2c2c2c;
+    vertical-align: middle;
+}
+
+/* total_budget column */
+.project_list_style td[name="total_budget"] {
+    color: #27ae60;
+    font-weight: 700;
+}
+
+/* client_name column */
+.project_list_style td[name="client_name"] {
+    font-weight: 600;
+    color: #555555;
+}
+
+/* freelancer_id column */
+.project_list_style td[name="freelancer_id"] {
+    color: #2c3e8c;
+    font-weight: 600;
+}
