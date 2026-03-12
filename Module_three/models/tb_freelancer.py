@@ -5,15 +5,29 @@ from odoo.exceptions import ValidationError
 class TBFreelancer(models.Model):
     _name = 'tb.freelancer'
 
-    name = fields.Char(required=1, string="Name")
-    email = fields.Char(required=1, string="Email Address")
-    phone = fields.Char(required=1, string="Phone Number")
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    #            ↑                ↑
+    #            messages          activity buttons
+    #            & followers       (schedule call etc.)
+
+    name = fields.Char(string='Name', required=True,
+                       tracking=True)  # ← tracking logs changes
+    #   in the chatter
+
+    email = fields.Char(string='Email', required=True,
+                        tracking=True)
+
+    phone = fields.Char(string='Phone', required=True)
+
+    daily_rate = fields.Float(string='Daily Rate',
+                              required=True,
+                              tracking=True)
+
     status = fields.Selection([
         ('available',   'Available'),
         ('busy',        'Busy'),
         ('unavailable', 'Unavailable'),
     ], string="Status", default='available')
-    daily_rate = fields.Float(string="Daily Rate")
 
     skill_ids = fields.Many2many(comodel_name='tb.skill')
 

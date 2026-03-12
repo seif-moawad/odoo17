@@ -5,24 +5,41 @@ from odoo.exceptions import UserError
 class Project(models.Model):
     _name = 'tb.project'
 
-    name = fields.Char(required=1, string="Project Name")
-    client_name = fields.Char(required=1, string="Client Name")
-    stage = fields.Selection([
-        ('draft', 'Draft'),
-        ('active', 'Active'),
-        ('completed', 'Completed'),
-        ('cancelled', 'Cancelled'),
-    ], string='Stage', default='draft',)
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
+    name = fields.Char(string='Project Name', required=True,
+                       tracking=True)
+
+    client_name = fields.Char(string='Client Name', required=True,
+                              tracking=True)
+
+    total_budget = fields.Float(string='Total Budget', required=True,
+                                tracking=True)
+
+    start_date = fields.Date(string='Start Date', required=True)
+    end_date = fields.Date(string='End Date', required=True)
+
     priority = fields.Selection([
         ('0', 'Normal'),
         ('1', 'High'),
         ('2', 'Critical'),
     ], string='Priority', default='0')
-    start_date = fields.Date(string='Start Date', required=1)
-    end_date = fields.Date(string='End Date', required=1)
-    total_budget = fields.Float(string='Total Budget (USD)')
 
-    freelancer_id = fields.Many2one(comodel_name='tb.freelancer')
+    stage = fields.Selection([
+        ('draft', 'Draft'),
+        ('active', 'Active'),
+        ('completed', 'Completed'),
+        ('cancelled', 'Cancelled'),
+    ], string='Stage', default='draft',
+        tracking=True,  # ← every stage change is logged automatically
+        required=True)
+
+    freelancer_id = fields.Many2one(
+        'tb.freelancer',
+        string='Freelancer',
+        tracking=True,  # ← logs when freelancer is changed
+    )
+
     task_ids = fields.One2many(comodel_name='tb.task',inverse_name='project_id')
 
 

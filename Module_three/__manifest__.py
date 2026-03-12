@@ -3,7 +3,7 @@
     'author' : 'xyz',
     'version' : '1.0',
     'category' : '',
-    'depends' : ['base', 'point_of_sale','sale_management'],
+    'depends' : ['base', 'mail','sale_management'],
     'data': [
         'security/ir.model.access.csv',
         'views/tb_freelancer_view.xml',
