@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b210eb77-0945-4348-8dd7-58d4147c2add" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Taskbridge_custom_addons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Taskbridge_custom_addons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_three/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module_three/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_three/views/tb_freelancer_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module_three/views/tb_freelancer_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module_three/models/tb_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module_three/models/tb_project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module_three/views/tb_project_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module_three/views/tb_project_view.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +118,7 @@
       <updated>1773306462885</updated>
       <workItem from="1773306464002" duration="3399000" />
       <workItem from="1773313209169" duration="28000" />
-      <workItem from="1773316441971" duration="465000" />
+      <workItem from="1773316441971" duration="2183000" />
     </task>
     <servers />
   </component>
@@ -127,6 +126,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Taskbridge_custom_addons$odoo_17.coverage" NAME="odoo-17 Coverage Results" MODIFIED="1773316519945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Taskbridge_custom_addons$odoo_17.coverage" NAME="odoo-17 Coverage Results" MODIFIED="1773318409934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

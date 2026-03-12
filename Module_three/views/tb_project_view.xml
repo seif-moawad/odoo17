@@ -1,47 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <!-- ═══════════════════════════════
+         FORM VIEW
+    ════════════════════════════════ -->
     <record id="tb_project_form_view" model="ir.ui.view">
         <field name="name">tb_project</field>
         <field name="model">tb.project</field>
         <field name="arch" type="xml">
+
             <form class="project_form_style">
+                <header>
+                    <button name="action_activate"
+                            string="Activate"
+                            type="object"
+                            class="btn-primary"
+                            invisible="stage != 'draft'"/>
+
+                    <button name="action_complete"
+                            string="Mark as Completed"
+                            type="object"
+                            class="btn-success"
+                            invisible="stage != 'active'"/>
+
+                    <button name="action_cancel"
+                            string="Cancel Project"
+                            type="object"
+                            invisible="stage != 'active'"/>
+
+                    <button name="action_reset_to_draft"
+                            string="Reset to Draft"
+                            type="object"
+                            invisible="stage != 'cancelled'"/>
+
+                    <field name="stage"
+                           widget="statusbar"
+                           statusbar_visible="draft,active,completed"/>
+                </header>
+
                 <sheet>
                     <group>
                         <group>
                             <field name="name"/>
                             <field name="client_name"/>
-                            <field name="stage"/>
                             <field name="freelancer_id"/>
+                            <field name="priority"/>
                         </group>
                         <group>
-                            <field name="task_ids"/>
-                            <field name="priority"/>
                             <field name="start_date"/>
                             <field name="end_date"/>
                             <field name="total_budget"/>
                         </group>
                     </group>
+
+                    <!-- task_ids belongs here in a notebook,
+                         NOT in the tree view -->
+                    <notebook>
+                        <page string="Tasks">
+                            <field name="task_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="is_done"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
+
         </field>
     </record>
+
+    <!-- ═══════════════════════════════
+         LIST VIEW
+    ════════════════════════════════ -->
     <record id="tb_project_tree_view" model="ir.ui.view">
         <field name="name">tb_project</field>
         <field name="model">tb.project</field>
         <field name="arch" type="xml">
-            <tree class="project_list_style">
+
+            <tree class="project_list_style"
+                  decoration-muted="stage == 'draft'"
+                  decoration-primary="stage == 'active'"
+                  decoration-success="stage == 'completed'"
+                  decoration-danger="stage == 'cancelled'">
+
                 <field name="name"/>
-                <field name="freelancer_id"/>
-                <field name="task_ids"/>
                 <field name="client_name"/>
-                <field name="stage"/>
+                <field name="freelancer_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
                 <field name="total_budget"/>
                 <field name="priority"/>
+                <field name="stage" widget="badge"/>
+
             </tree>
+
         </field>
     </record>
+
+    <!-- ═══════════════════════════════
+         ACTION
+    ════════════════════════════════ -->
     <record id="tb_project_action" model="ir.actions.act_window">
         <field name="name">Projects</field>
         <field name="res_model">tb.project</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
+
 </odoo>
